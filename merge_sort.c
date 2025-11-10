@@ -24,17 +24,24 @@ void merge(int array[], int left, int mid, int right)
 void mergeSort(int array[], int left, int right)
 {
     // Check if left is less than or equal to right
+    if (left < right)
+    {
         // Find the middle point
+        int mid = left + (right - left) / 2;
 
         // Recursively divide the left and right sides
-    
-    // And merge the sub arrays
+        mergeSort(array, left, mid);
+        mergeSort(array, mid + 1, right);
+
+        // And merge the sub arrays
+        merge(array, left, mid, right);
+    }
 }
 
 
 int main()
 {
-    printf("Merge Sort Implementation");
+    printf("Merge Sort Implementation\n");
 
     // Declare and initialise an unsorted array
     int array[] = {10, 23, 42, 12, 6, 89, 101, 47, 9, 194};
