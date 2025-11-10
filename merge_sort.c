@@ -102,12 +102,16 @@ int main()
 
     // Recursively break down the array until single elements
     mergeSort(array, 0, size -1);
-
-    // Merge the sub arrays back into the array
-
-    // Copy the remaining elements if any exist
     
     // Print the sorted array result
+    printf("The sorted array is: \n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", array[i]);
+    }
+
+    printf("\n");
+
 
     return 0;
 }
