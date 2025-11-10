@@ -10,12 +10,40 @@
 void merge(int array[], int left, int mid, int right)
 {
     // Get sizes of the sub arrays
+    int leftSize = mid - left + 1;
+    int rightSize = right - mid;
 
     // Create temporary arrays
+    int tempLeftArray[leftSize];
+    int tempRightArray[rightSize];
 
     // Copy data into the temp arrays
+    for (int i = 0; i < leftSize; i++)
+    {
+        tempLeftArray[i] = array[left + i];
+    }
+    for (int i = 0; i < rightSize; i++)
+    {
+        tempRightArray[i] = array[mid + 1 + i];
+    }
 
     // Merge the temp arrays back into array
+    int i = 0, j = 0, k = left;
+
+    while ( i< leftSize && j < rightSize)
+    {
+        // Check which sub array value is greater
+        if (tempLeftArray[i] <= tempRightArray[j])
+        {
+            array[k] = tempLeftArray[i];
+            i++;
+        }
+        else 
+        {
+            array[k] = tempRightArray[j];
+            j++;
+        }
+    }
 
     // Copy remaining elements of left if any
 }
@@ -59,7 +87,7 @@ int main()
     printf("\n");
 
     // Recursively break down the array until single elements
-
+    mergeSort(array, 0, size -1);
 
     // Merge the sub arrays back into the array
 
