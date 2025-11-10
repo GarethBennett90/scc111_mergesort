@@ -6,7 +6,15 @@
  * @author - Gareth Bennett
 */
 
+void merge(int array[], int left, int mid, int right)
+{
+    // Function to merge the sub arrays
+}
 
+void mergeSort(int array[], int left, int right)
+{
+    // Function to recursively break down the array
+}
 
 
 int main()
@@ -27,8 +35,9 @@ int main()
     }
 
     printf("\n");
-    
+
     // Recursively break down the array until single elements
+    
 
     // Merge the sub arrays back into the array
 
