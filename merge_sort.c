@@ -30,7 +30,7 @@ void merge(int array[], int left, int mid, int right)
     // Merge the temp arrays back into array
     int i = 0, j = 0, k = left;
 
-    while ( i< leftSize && j < rightSize)
+    while (i < leftSize && j < rightSize)
     {
         // Check which sub array value is greater
         if (tempLeftArray[i] <= tempRightArray[j])
@@ -43,9 +43,23 @@ void merge(int array[], int left, int mid, int right)
             array[k] = tempRightArray[j];
             j++;
         }
+        k++;
     }
 
     // Copy remaining elements of left if any
+    while (i < leftSize)
+    {
+        array[k] = tempLeftArray[i];
+        i++;
+        k++;
+    }
+
+    while (j < rightSize)
+    {
+        array[k] = tempRightArray[j];
+        j++;
+        k++;
+    }
 }
 
 // Function to recursively break down the array
