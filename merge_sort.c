@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * Program to sort a given array
@@ -19,13 +20,10 @@ void merge(int array[], int left, int mid, int right)
 
     // Copy data into the temp arrays
     for (int i = 0; i < leftSize; i++)
-    {
         tempLeftArray[i] = array[left + i];
-    }
+
     for (int i = 0; i < rightSize; i++)
-    {
         tempRightArray[i] = array[mid + 1 + i];
-    }
 
     // Merge the temp arrays back into array
     int i = 0, j = 0, k = left;
@@ -112,6 +110,5 @@ int main()
 
     printf("\n");
 
-
-    return 0;
+    return EXIT_SUCCESS;
 }
