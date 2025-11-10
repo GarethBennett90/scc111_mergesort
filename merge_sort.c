@@ -6,14 +6,29 @@
  * @author - Gareth Bennett
 */
 
+// Function to merge the sub arrays
 void merge(int array[], int left, int mid, int right)
 {
-    // Function to merge the sub arrays
+    // Get sizes of the sub arrays
+
+    // Create temporary arrays
+
+    // Copy data into the temp arrays
+
+    // Merge the temp arrays back into array
+
+    // Copy remaining elements of left if any
 }
 
+// Function to recursively break down the array
 void mergeSort(int array[], int left, int right)
 {
-    // Function to recursively break down the array
+    // Check if left is less than or equal to right
+        // Find the middle point
+
+        // Recursively divide the left and right sides
+    
+    // And merge the sub arrays
 }
 
 
@@ -37,7 +52,7 @@ int main()
     printf("\n");
 
     // Recursively break down the array until single elements
-    
+
 
     // Merge the sub arrays back into the array
 
